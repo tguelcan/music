@@ -1,0 +1,14 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '$styles/main';
+
+@layer base {
+	body {
+		@apply bg-gray-light dark:bg-gray-dark text-black dark:text-white;
+
+		transition: background-color 200ms ease-out;
+	}
+}
