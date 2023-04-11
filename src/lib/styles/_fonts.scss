@@ -1,0 +1,15 @@
+@layer components {
+	h1,
+	h2,
+	h3 {
+		@apply font-serif cursor-default text-primary-dark dark:text-primary-light;
+	}
+
+	h1 {
+		@apply text-4xl;
+	}
+
+	a {
+		@apply text-primary-dark hover:text-primary transition-all;
+	}
+}
