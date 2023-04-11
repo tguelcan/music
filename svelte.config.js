@@ -1,7 +1,7 @@
 import preprocess from 'svelte-preprocess';
-import { mdsvex } from 'mdsvex';
-import mdsvexConfig from './mdsvex.config.js';
 import adapter from '@sveltejs/adapter-vercel';
+import mdsvexConfig from './mdsvex.config.js';
+import { mdsvex } from 'mdsvex';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -13,6 +13,7 @@ const config = {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex(mdsvexConfig),
+
 		preprocess({
 			postcss: true
 		})
@@ -28,7 +29,7 @@ const config = {
 			$components: 'src/lib/components/*',
 			$assets: 'src/lib/assets/*',
 			$helper: 'src/lib/helper/*',
-			$forms: 'src/lib/forms/*',
+			$server: 'src/lib/server/*',
 			$styles: 'src/lib/styles/*'
 		}
 	}

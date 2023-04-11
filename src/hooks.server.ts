@@ -1,21 +1,12 @@
 import type { Handle, HandleFetch } from '@sveltejs/kit';
 import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '$env/static/private';
 import { dev } from '$app/environment';
-
+import { setLanguage } from '$server/helper';
 let cookieName = 'app';
 
 export const handle = (async ({ event, resolve }) => {
 	const appToken = event.cookies.get(cookieName);
-	/**
-	 * Set language for future requests
-	 */
-	let lang = event.request.headers.get('accept-language').split(',')[0].trim().slice(0, 2);
-	// spotify does not know a language code 'en'
-	// Doc: https://gist.github.com/frankkienl/a594807bf0dcd23fdb1b
-	if (lang == 'en') {
-		lang = 'GB';
-	}
-	event.locals.lang = lang?.toUpperCase() || 'US';
+
 	/**
 	 * Get app access token and set cookie
 	 * Doc: https://developer.spotify.com/documentation/web-api/tutorials/getting-started
@@ -56,9 +47,10 @@ export const handle = (async ({ event, resolve }) => {
 export const handleFetch = (({ event, request, fetch, locals }) => {
 	const appToken = event.cookies.get(cookieName);
 	const { pathname } = new URL(request.url);
-	// Set authorization header for every api request
+
+	// Set authorization header and country code for every api request
 	if (pathname?.startsWith('/api') && !!appToken) {
-		request.url.replace('http://localhost:5173/api/', 'https://api.spotify.com/v1/');
+		request = setLanguage(event, request);
 		request.headers.set('Authorization', `Bearer ${appToken}`);
 	}
 

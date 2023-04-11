@@ -1,13 +1,12 @@
 import type { PageServerLoad } from './$types';
 
 export const load = (async ({ params, fetch, locals }) => {
-	const { lang } = locals;
-	const newReleasesResponse = await fetch(`/api/browse/new-releases?country=${lang}`);
+	const newReleasesResponse = await fetch(`/api/browse/new-releases`);
 
-	let newReleases = await newReleasesResponse.json();
+	let NewReleases = await newReleasesResponse.json();
 
-	console.log(newReleases);
+	// console.log(NewReleases.albums.items[0]);
 	return {
-		newReleases
+		NewAlbums: NewReleases.albums
 	};
 }) satisfies PageServerLoad;
