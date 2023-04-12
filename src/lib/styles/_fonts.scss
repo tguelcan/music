@@ -10,6 +10,8 @@
 	}
 
 	a {
-		@apply text-primary-dark hover:text-primary transition-all;
+		@apply transition-all;
+		@apply text-primary-dark hover:text-primary;
+		@apply dark:text-primary dark:hover:text-primary-light;
 	}
 }

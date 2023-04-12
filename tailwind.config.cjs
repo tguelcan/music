@@ -11,8 +11,8 @@ const config = {
 				'2xl': '768px'
 			},
 			padding: {
-				// DEFAULT: '0.5rem',
-				lg: '0rem'
+				DEFAULT: '0.5rem',
+				md: '0rem'
 			}
 		},
 		fontFamily: {

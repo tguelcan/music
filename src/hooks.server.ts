@@ -1,7 +1,7 @@
 import type { Handle, HandleFetch } from '@sveltejs/kit';
 import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '$env/static/private';
 import { dev } from '$app/environment';
-import { setLanguage } from '$server/helper';
+import { setLanguage } from '$server';
 let cookieName = 'app';
 
 export const handle = (async ({ event, resolve }) => {
