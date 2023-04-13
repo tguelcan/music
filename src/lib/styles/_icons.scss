@@ -8,17 +8,18 @@
 	height: 22px;
 	border: 2px solid transparent;
 	border-radius: 100px;
-}
-.gg-chevron-left::after {
-	content: '';
-	display: block;
-	box-sizing: border-box;
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	border-bottom: 2px solid;
-	border-left: 2px solid;
-	transform: rotate(45deg);
-	left: 6px;
-	top: 4px;
+
+	&::after {
+		content: '';
+		display: block;
+		box-sizing: border-box;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border-bottom: 2px solid;
+		border-left: 2px solid;
+		transform: rotate(45deg);
+		left: 6px;
+		top: 4px;
+	}
 }
