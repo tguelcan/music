@@ -5,8 +5,8 @@
 </script>
 
 <div>
-	<a href="/album/{id}" class="group space-y-1">
-		<div class="w-auto sm:w-36 rounded-sm overflow-hidden relative drop-shadow">
+	<a href="/album/{id}" class="group space-y-1 relative">
+		<div class="w-auto sm:w-36 rounded overflow-hidden relative">
 			{#if name} <span class="sr-only">{name}</span>{/if}
 			<div
 				class="group-hover:bg-primary-light mix-blend-multiply transition-all absolute inset-0"
@@ -15,13 +15,15 @@
 		</div>
 		{#if name}
 			<div
-				class="w-36 font-bold truncate text-sm text-primary-dark dark:text-primary-light group-hover:text-primary transition-all"
+				class="absolute bottom-0 bg-white/90 dark:bg-gray-dark/90 sm:relative sm:bg-transparent sm:bottom-0 p-3 sm:p-0 w-full sm:w-36 font-bold truncate text-lg sm:text-sm text-primary-dark dark:text-primary-light group-hover:text-primary transition-all"
 			>
 				{name}
 			</div>
 		{/if}
 	</a>
 	{#each artists as artist}
-		<div class="text-xs"><a href="/artist/{artist.id}">{artist.name}</a></div>
+		<div class="hidden sm:block text-xs">
+			<a href="/artist/{artist.id}">{artist.name}</a>
+		</div>
 	{/each}
 </div>
