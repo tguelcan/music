@@ -1,6 +1,7 @@
 import type { PageServerLoad } from './$types';
-import { getArtistAlbums } from '$server';
+import { getArtistAlbums, getArtist } from '$server';
 
 export const load = (async ({ fetch, params }) => ({
-	albums: getArtistAlbums(fetch, params.id)
+	artist: getArtist(fetch, params.id),
+	albums: getArtistAlbums(fetch, params.id, 50)
 })) satisfies PageServerLoad;

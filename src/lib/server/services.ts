@@ -82,7 +82,7 @@ export const getArtistAlbums = async (
 	const responseData = await errorHandler(response);
 	// Remove dublicate albums
 	responseData.items = responseData.items.filter(
-		(v, i, a) => a.findIndex((v2) => v2.name === v.name) === i
+		(v, i, a) => a.findIndex((b) => b.name === v.name) === i
 	);
 	return responseData;
 };

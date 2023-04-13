@@ -6,7 +6,7 @@
 
 <div>
 	<a href="/album/{id}" class="group space-y-1">
-		<div class="w-36 rounded-sm overflow-hidden relative drop-shadow">
+		<div class="w-auto sm:w-36 rounded-sm overflow-hidden relative drop-shadow">
 			{#if name} <span class="sr-only">{name}</span>{/if}
 			<div
 				class="group-hover:bg-primary-light mix-blend-multiply transition-all absolute inset-0"

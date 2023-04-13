@@ -1,16 +1,20 @@
 <script lang="ts">
 	import { generateSrcset } from '$helper';
-
+	import Back from '$components/elements/Back.svelte';
 	$: ({ name, images, artists, genres } = $$restProps);
 </script>
 
-<div class="relative isolate overflow-hidden pt-24">
+<div class="relative isolate overflow-hidden pt-8">
+	<div class="container relative z-20">
+		<Back />
+	</div>
 	<img
 		alt="Artist"
 		srcset={generateSrcset(images)}
 		width="100%"
 		class="absolute inset-0 -z-10 h-full w-full object-cover object-center"
 	/>
+
 	<div class="container relative z-20 py-8 sm:py-16 md:py-28">
 		<div>
 			<h1 class="text-4xl text-primary-light sm:text-6xl">

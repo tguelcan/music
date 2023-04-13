@@ -37,7 +37,6 @@
 		{/each}
 	</ul>
 </div>
-
 <!-- Albums -->
 <div class="container">
 	<h1 class="my-4">Albums</h1>
@@ -45,5 +44,11 @@
 		{#each albums.items as album}
 			<Cover {...album} />
 		{/each}
+	</div>
+	<div class="flex justify-center mt-4">
+		<a href="/artist/{artist.id}/albums" class="btn link">
+			<span class="sr-only">show all</span>
+			Show all albums
+		</a>
 	</div>
 </div>

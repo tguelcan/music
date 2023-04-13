@@ -41,7 +41,12 @@ const config = {
 				dark: '#222725'
 			}
 		},
-		extend: {}
+		extend: {
+			screens: {
+				xs: '465px'
+				// => @media (min-width: 465px) { ... }
+			}
+		}
 	},
 
 	plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')]
