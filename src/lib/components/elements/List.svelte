@@ -1,8 +1,23 @@
 <script lang="ts">
 	import { generateSrcset, convertMilliseconds } from '$helper';
-
+	import { browser } from '$app/environment';
 	export let title: string | null = null;
 	export let tracks: object;
+
+	if (browser) {
+		document.addEventListener(
+			'play',
+			function (e) {
+				var audios = document.getElementsByTagName('audio');
+				for (var i = 0, len = audios.length; i < len; i++) {
+					if (audios[i] != e.target) {
+						audios[i].pause();
+					}
+				}
+			},
+			true
+		);
+	}
 </script>
 
 {#if title}
@@ -33,5 +48,16 @@
 				{convertMilliseconds(track.duration_ms)}
 			</div>
 		</li>
+		<audio
+			id="audio_with_controls"
+			controls
+			src={track.preview_url}
+			type="audio/mp3"
+			class="w-full"
+		>
+			Your browser cannot play this audio.<br />
+			You can find it under
+			<a href={track.href}>this link</a>.
+		</audio>
 	{/each}
 </ul>
