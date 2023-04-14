@@ -14,4 +14,8 @@
 		@apply text-primary-dark hover:text-primary;
 		@apply dark:text-primary dark:hover:text-primary-light;
 	}
+
+	.title {
+		@apply mb-8 text-xl sm:text-3xl;
+	}
 }

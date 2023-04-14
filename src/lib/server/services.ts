@@ -48,7 +48,9 @@ export const getArtist = async (fetch: any, id: string): Promise<object> => {
  */
 export const getReleatedArtists = async (fetch: any, id: string): Promise<object> => {
 	const response = await fetch(`/api/artists/${id}/related-artists`);
-	return errorHandler(response);
+	const responseData = await errorHandler(response);
+	responseData.artists.length = 15;
+	return responseData;
 };
 
 /**

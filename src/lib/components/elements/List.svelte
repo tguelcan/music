@@ -6,7 +6,7 @@
 </script>
 
 {#if title}
-	<h1 class="pb-4 pt-8">Popular</h1>
+	<h1 class="title pb-4 pt-8">Popular</h1>
 {/if}
 <ul class="divide-y divide-gray dark:divide-primary-dark">
 	{#each tracks as track}
