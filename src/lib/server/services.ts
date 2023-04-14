@@ -41,6 +41,17 @@ export const getArtist = async (fetch: any, id: string): Promise<object> => {
 };
 
 /**
+ * Doc: https://developer.spotify.com/documentation/web-api/reference/get-an-artists-related-artists
+ * @param fetch
+ * @param id
+ * @returns Releated artists by id
+ */
+export const getReleatedArtists = async (fetch: any, id: string): Promise<object> => {
+	const response = await fetch(`/api/artists/${id}/related-artists`);
+	return errorHandler(response);
+};
+
+/**
  * Doc: https://developer.spotify.com/documentation/web-api/reference/get-an-album
  * @param fetch
  * @param id

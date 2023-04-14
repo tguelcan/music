@@ -2,11 +2,11 @@
 	h1,
 	h2,
 	h3 {
-		@apply font-serif cursor-default text-primary-dark dark:text-primary-light;
+		@apply cursor-default text-primary-dark dark:text-primary-light;
 	}
 
 	h1 {
-		@apply text-4xl;
+		@apply text-4xl font-bold;
 	}
 
 	a {

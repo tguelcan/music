@@ -6,3 +6,11 @@ export const generateSrcset = (image) => image.map((img) => `${img.url} ${img.wi
 
 // Convert milliseconds to tade and trim (simple way)
 export const convertMilliseconds = (ms) => new Date(ms).toISOString().slice(14, 19);
+
+// Get year from date
+export const transformDate = (date) => {
+	const d = new Date(date);
+	return {
+		year: d.getFullYear()
+	};
+};

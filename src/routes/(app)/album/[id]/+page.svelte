@@ -3,6 +3,7 @@
 	import { afterNavigate } from '$app/navigation';
 	import { base } from '$app/paths';
 	import Header from '$components/elements/Header.svelte';
+	import List from '$components/elements/List.svelte';
 
 	export let data: PageData;
 	let previousPage: string = base;
@@ -19,7 +20,11 @@
 	artists={album.artists}
 	genres={album.genres}
 	images={album.images}
+	release_date={album.release_date}
 	{previousPage}
 />
-
-<pre>{JSON.stringify(album, 0, 1)}</pre>
+<div class="wrapper">
+	<div class="container">
+		<List title="Popular" tracks={album.tracks.items} />
+	</div>
+</div>

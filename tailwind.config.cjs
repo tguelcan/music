@@ -16,8 +16,7 @@ const config = {
 			}
 		},
 		fontFamily: {
-			sans: ['Poppins', ...fontFamily.sans],
-			serif: ['Playfair Display', ...fontFamily.serif]
+			sans: ['Raleway', ...fontFamily.sans]
 		},
 		colors: {
 			transparent: 'transparent',

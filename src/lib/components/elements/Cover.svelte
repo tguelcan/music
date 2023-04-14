@@ -2,6 +2,8 @@
 	import { generateSrcset } from '$helper';
 
 	$: ({ name, images, artists, id } = $$restProps);
+
+	// bottom-0 bg-white/90 dark:bg-gray-dark/90 sm:relative sm:bg-transparent sm:bottom-0 p-3 sm:p-0 w-full sm:w-36 font-bold truncate text-lg sm:text-sm text-primary-dark dark:text-primary-light group-hover:text-primary transition-all
 </script>
 
 <div>
@@ -14,15 +16,13 @@
 			<img alt="Albums" srcset={generateSrcset(images)} />
 		</div>
 		{#if name}
-			<div
-				class="absolute bottom-0 bg-white/90 dark:bg-gray-dark/90 sm:relative sm:bg-transparent sm:bottom-0 p-3 sm:p-0 w-full sm:w-36 font-bold truncate text-lg sm:text-sm text-primary-dark dark:text-primary-light group-hover:text-primary transition-all"
-			>
+			<div class="relative truncate w-32 xs:w-48 sm:w-32 font-bold text-xl sm:text-sm">
 				{name}
 			</div>
 		{/if}
 	</a>
 	{#each artists as artist}
-		<div class="hidden sm:block text-xs">
+		<div class="text-md sm:text-xs">
 			<a href="/artist/{artist.id}">{artist.name}</a>
 		</div>
 	{/each}

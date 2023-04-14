@@ -2,7 +2,12 @@
 	@apply rounded-full py-2 px-4;
 
 	&.primary {
-		@apply bg-primary-light hover:bg-primary/20 hover:text-primary-dark  dark:bg-primary-dark dark:hover:bg-primary-dark/80 dark:text-primary-light dark:hover:text-primary;
+		@apply bg-primary-light hover:bg-primary/20 hover:text-primary-dark;
+		@apply dark:bg-primary-dark dark:hover:bg-primary-dark/80 dark:text-primary-light dark:hover:text-primary;
+	}
+
+	&.secondary {
+		@apply border hover:border-primary;
 	}
 }
 

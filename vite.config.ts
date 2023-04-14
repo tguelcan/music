@@ -7,7 +7,7 @@ export default defineConfig({
 		sveltekit(),
 		Unfonts({
 			google: {
-				families: ['Playfair Display', 'Poppins']
+				families: ['Raleway']
 			}
 		})
 	],
