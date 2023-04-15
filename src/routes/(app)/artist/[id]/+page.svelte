@@ -19,7 +19,7 @@
 
 	<div class="container">
 		<h1 class="title my-4">Albums</h1>
-		<div class="flex flex-wrap gap-2">
+		<div class="wrapper-cover">
 			{#each albums.items as album}
 				<Cover {...album} />
 			{/each}

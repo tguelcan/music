@@ -15,6 +15,12 @@
 		@apply dark:text-primary dark:hover:text-primary-light;
 	}
 
+	.text {
+		&-inverse {
+			@apply text-primary-light dark:text-primary-dark;
+		}
+	}
+
 	.title {
 		@apply mb-8 text-xl sm:text-3xl;
 	}
