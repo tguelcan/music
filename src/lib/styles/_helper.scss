@@ -1,0 +1,7 @@
+dd:after {
+	content: ',\00a0';
+}
+
+dl dd:last-child:after {
+	content: '';
+}

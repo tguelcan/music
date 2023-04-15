@@ -1,7 +1,6 @@
 <script>
 	import '../app.scss';
 	import SlectTheme from '$components/layout/Theme.svelte';
-	import { preview_url } from '$components/player/store';
 	import NativePlayer from '$components/player/NativePlayer.svelte';
 </script>
 
@@ -52,5 +51,5 @@
 	</div>
 </div>
 <div class="fixed z-20 bottom-0 inset-x-0">
-	<NativePlayer {preview_url} />
+	<NativePlayer />
 </div>

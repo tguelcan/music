@@ -3,6 +3,11 @@
 The project was created as part of the [Sveltekit Hackerthon](https://hack.sveltesociety.dev/) and is intended to show examples of how to connect and process data as well as some practical examples of how to develop frontend components with tailwindcss.
 The project is open source and collaboration / further development is welcome.
 
+<table><tr>
+<td> <img src="public/screenshot1.png" width="600" alt="Screenshot1"> </td>
+<td> <img src="public/screenshot2.png" width="245" alt="Screenshot2"> </td>
+</tr></table>
+
 ## Develope
 
 ```bash
@@ -46,3 +51,8 @@ Colors
 - [css.gg](https://css.gg/) icons
 - Raleway [Google font](https://fonts.google.com/specimen/Raleway) with [unplugin-fonts](https://github.com/cssninjaStudio/unplugin-fonts) for vite.
 - [TailwindCSS](https://tailwindcss.com/)
+
+### Upcoming
+
+- User authentication
+- Search function

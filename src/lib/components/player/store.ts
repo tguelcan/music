@@ -1,3 +1,3 @@
 import { writable } from 'svelte/store';
 
-export const preview_url = writable(null);
+export const audioTrack = writable(null);
