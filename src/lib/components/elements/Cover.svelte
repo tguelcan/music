@@ -16,7 +16,7 @@
 			<img alt="Albums" srcset={generateSrcset(images)} />
 		</div>
 		{#if name}
-			<div class="relative truncate w-32 xs:w-48 sm:w-32 font-bold text-xl sm:text-sm text-inverse">
+			<div class="relative truncate w-32 xs:w-48 sm:w-32 font-bold text-sm text-inverse">
 				{name}
 			</div>
 		{/if}

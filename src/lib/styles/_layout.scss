@@ -2,6 +2,6 @@
 	@apply max-w-4xl mx-auto bg-gray-light dark:bg-gray-dark relative z-10 rounded-sm;
 
 	&-cover {
-		@apply grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 justify-between gap-4 mt-4;
+		@apply grid xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 justify-between gap-4 mt-4;
 	}
 }

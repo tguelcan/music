@@ -27,4 +27,6 @@
 	}
 </script>
 
-<button on:click={() => handleTheme()}>Theme</button>
+<button on:click={() => handleTheme()} class="dark:text-primary dark:hover:text-primary-light">
+	<i class={darkMode ? 'gg-sun' : 'gg-moon'} />
+</button>

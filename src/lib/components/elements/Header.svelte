@@ -4,7 +4,7 @@
 	$: ({ name, images, artists, genres, release_date } = $$restProps);
 </script>
 
-<div class="relative isolate overflow-hidden pt-8 z-0">
+<div class="relative overflow-hidden pt-8 z-0">
 	<div class="container relative z-20">
 		<Back />
 	</div>
@@ -12,9 +12,9 @@
 		alt="Artist"
 		srcset={generateSrcset(images)}
 		width="100%"
-		class="fixed inset-0 -z-10 h-80 w-full object-cover object-center"
+		class="absolute inset-0 -z-10 h-80 w-full object-cover object-center"
 	/>
-	<div class="fixed h-80 bg-primary-dark/70 inset-0 z-0" />
+	<div class="absolute h-80 bg-primary-dark/70 inset-0 z-0" />
 
 	<div class="container relative z-20 pt-8 sm:pt-16 md:pt-24 pb-8">
 		<div>
