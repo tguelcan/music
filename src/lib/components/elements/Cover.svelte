@@ -2,8 +2,6 @@
 	import { generateSrcset } from '$helper';
 
 	$: ({ name, images, artists, id } = $$restProps);
-
-	// bottom-0 bg-white/90 dark:bg-gray-dark/90 sm:relative sm:bg-transparent sm:bottom-0 p-3 sm:p-0 w-full sm:w-36 font-bold truncate text-lg sm:text-sm text-primary-dark dark:text-primary-light group-hover:text-primary transition-all
 </script>
 
 <div class="bg-primary-dark dark:bg-primary-light p-3 rounded">
