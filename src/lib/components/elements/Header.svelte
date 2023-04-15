@@ -18,7 +18,7 @@
 
 	<div class="container relative z-20 pt-8 sm:pt-16 md:pt-24 pb-8">
 		<div>
-			<h1 class="text-4xl text-primary-light sm:text-6xl">
+			<h1 class="text-4xl text-primary-light">
 				{name}
 			</h1>
 			{#if artists && artists.length}
