@@ -8,6 +8,8 @@ The project is open source and collaboration / further development is welcome.
 <td> <img src="public/screenshot2.png" width="245" alt="Screenshot2"> </td>
 </tr></table>
 
+[Live Demo](https://music-lime-gamma.vercel.app/)
+
 ## Develope
 
 ```bash
