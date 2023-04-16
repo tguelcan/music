@@ -1,6 +1,6 @@
 import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '$env/static/private';
 
-const redirect_uri = 'http://localhost:5173/callback';
+const redirect_uri = `${process.env.VERCEL_URL}/callback` || 'http://localhost:5173/callback';
 
 export const getToken = async (code?: string) => {
 	const headers = new Headers();
