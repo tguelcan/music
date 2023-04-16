@@ -1,5 +1,6 @@
 import { fail } from '@sveltejs/kit';
 export * from './services';
+export * from './auth';
 
 export const setLanguage = (event, request) => {
 	let lang = event.request.headers.get('accept-language')?.split(',')[0]?.trim()?.slice(0, 2);

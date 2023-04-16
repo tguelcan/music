@@ -1,7 +1,21 @@
-<script>
+<script lang="ts">
 	import '../app.scss';
+	import type { LayoutData } from './$types';
 	import SlectTheme from '$components/layout/Theme.svelte';
 	import NativePlayer from '$components/player/NativePlayer.svelte';
+	import { setContext } from 'svelte';
+	import { writable } from 'svelte/store';
+	export let data: LayoutData;
+
+	/**
+	 * Store user
+	 * Doc: https://kit.svelte.dev/docs/state-management#using-stores-with-context
+	 */
+	// Create a store and update it when necessary...
+	const user = writable();
+	$: user.set(data?.user || {});
+	// ...and add it to the context for child components to access
+	setContext('user', user);
 </script>
 
 <div class="flex flex-col h-screen">
@@ -14,7 +28,14 @@
 			>
 			<div class="flex items-center space-x-4 sm:space-x-6">
 				<a href="/search" aria-label="Music Search"><i class="gg-search" /></a>
-				<SlectTheme />
+
+				<a href="/profile" aria-label="Profile">
+					{#if $user.display_name}
+						<div class="btn primary">{$user.display_name}</div>
+					{:else}
+						<i class="gg-profile" />
+					{/if}
+				</a>
 			</div>
 		</div>
 	</div>
@@ -34,6 +55,8 @@
 			</div>
 
 			<div class="flex justify-center sm:justify-start mt-6 sm:mt-0 space-x-4">
+				<SlectTheme />
+
 				<a
 					href="https://github.com/tguelcan/music"
 					target="_blank"

@@ -5,6 +5,7 @@ declare global {
 		// interface Error {}
 		interface Locals {
 			lang: string;
+			user: User;
 		}
 		// interface PageData {}
 		// interface Platform {}

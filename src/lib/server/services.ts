@@ -112,3 +112,14 @@ export const search = async (fetch: any, params: string): Promise<object> => {
 	console.log(q);
 	return errorHandler(response);
 };
+
+/**
+ * Doc: https://developer.spotify.com/documentation/web-api/reference/get-current-users-profile
+ * @param fetch
+ * @param searchparams
+ * @returns Search album or artist
+ */
+export const getMe = async (fetch: any): Promise<object> => {
+	const response = await fetch(`/api/me`);
+	return response.json();
+};
