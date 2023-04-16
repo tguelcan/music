@@ -20,7 +20,6 @@ export const actions = {
 			 * Get data
 			 */
 			const data = await request.formData();
-			console.log(data);
 			/**
 			 * Validate data
 			 */
