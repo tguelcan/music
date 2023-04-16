@@ -30,6 +30,7 @@
 <button
 	on:click={() => handleTheme()}
 	class="hover:text-primary dark:text-primary dark:hover:text-primary-light"
+	aria-label="Change dark or light mode"
 >
 	<i class={darkMode ? 'gg-sun' : 'gg-moon'} />
 </button>

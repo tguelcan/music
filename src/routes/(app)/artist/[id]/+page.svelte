@@ -25,7 +25,7 @@
 			{/each}
 		</div>
 		<div class="flex justify-center mt-4">
-			<a href="/artist/{artist.id}/albums" class="btn secondary">
+			<a href="/artist/{artist.id}/albums" class="btn secondary" aria-label="Artist detail page">
 				<span class="sr-only">show all</span>
 				Show all albums
 			</a>

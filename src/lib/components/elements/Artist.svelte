@@ -4,7 +4,7 @@
 	$: ({ name, images, id } = $$restProps);
 </script>
 
-<a href="/artist/{id}" class="group space-y-1 relative">
+<a href="/artist/{id}" class="group space-y-1 relative" aria-label="Artist detail page">
 	<div class="relative">
 		<span class="sr-only">{name}</span>
 		<div

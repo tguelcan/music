@@ -5,7 +5,7 @@
 </script>
 
 <div class="bg-primary-dark dark:bg-primary-light p-3 rounded">
-	<a href="/album/{id}" class="group space-y-2 relative">
+	<a href="/album/{id}" class="group space-y-2 relative" aria-label="Album detail page">
 		<div class="w-auto rounded overflow-hidden relative">
 			{#if name} <span class="sr-only">{name}</span>{/if}
 			<div
@@ -21,7 +21,9 @@
 	</a>
 	{#each artists as artist}
 		<div class="text-md sm:text-xs">
-			<a class="text-inverse" href="/artist/{artist.id}">{artist.name}</a>
+			<a class="text-inverse" href="/artist/{artist.id}" aria-label="Artist detail page"
+				>{artist.name}</a
+			>
 		</div>
 	{/each}
 </div>

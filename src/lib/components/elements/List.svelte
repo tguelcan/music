@@ -25,6 +25,7 @@
 				? 'cursor-pointer hover:bg-gray dark:hover:bg-primary-dark'
 				: 'cursor-default'}"
 			on:mousedown={() => assignTrack(track)}
+			aria-label="Play track"
 		>
 			{#if track?.album}
 				<img
@@ -43,7 +44,7 @@
 					<div class="flex flex-wrap">
 						{#each track?.artists as artist}
 							<dd class="text-sm font-light space-x-2">
-								<a href="/artist/{artist.id}">{artist.name}</a>
+								<a href="/artist/{artist.id}" aria-label="Artist detail page">{artist.name}</a>
 							</dd>
 						{/each}
 					</div>
