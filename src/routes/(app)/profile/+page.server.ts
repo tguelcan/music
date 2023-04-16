@@ -3,7 +3,7 @@ import { json, redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { getMe } from '$server';
 
-var redirect_uri = 'http://localhost:5173/callback';
+const redirect_uri = `${process.env.VERCEL_URL}/callback` || 'http://localhost:5173/callback';
 
 export const load = (async ({ fetch }) => {
 	const user = await getMe(fetch);
