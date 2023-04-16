@@ -6,8 +6,7 @@
 	import Artist from '$components/elements/Artist.svelte';
 
 	export let form: ActionData;
-
-	$: console.log(form);
+	let group = 'artist';
 </script>
 
 <div class="container">
@@ -30,7 +29,7 @@
 						value="artist"
 						name="qType"
 						id="type_artist"
-						checked
+						bind:group
 					/>
 					<label class="pill primary md checkable" for="type_artist">Artist</label>
 				</div>
@@ -51,7 +50,7 @@
 </div>
 
 {#if form?.artists}
-	<div class="container bg-primary-dark p-8 my-8 md:rounded">
+	<div class="container bg-primary-dark p-8 mt-4 md:rounded">
 		<h1 class="title text-gray-light">Artists</h1>
 		<div class="flex flex-wrap gap-4 sm:gap-7 justify-start">
 			{#each form.artists.items as releatedArtist}
@@ -61,7 +60,7 @@
 	</div>
 {/if}
 {#if form?.albums}
-	<div class="container my-4">
+	<div class="container mt-4">
 		<h1 class="title my-4">Albums</h1>
 		<div class="wrapper-cover">
 			{#each form.albums.items as album}
