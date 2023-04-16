@@ -12,9 +12,9 @@
 		alt="Artist"
 		srcset={generateSrcset(images)}
 		width="100%"
-		class="absolute inset-0 -z-10 h-80 w-full object-cover object-center"
+		class="fixed inset-0 top-20 -z-10 h-80 w-full object-cover object-center"
 	/>
-	<div class="absolute h-80 bg-primary-dark/70 inset-0 z-0" />
+	<div class="fixed top-20 h-80 bg-primary-dark/70 inset-0 z-0" />
 
 	<div class="container relative z-20 pt-8 sm:pt-16 md:pt-24 pb-8">
 		<div>

@@ -24,7 +24,7 @@
 	{previousPage}
 />
 <div class="wrapper">
-	<div class="container mb-8">
+	<div class="container">
 		<List title="Popular" tracks={album.tracks.items} />
 	</div>
 </div>
