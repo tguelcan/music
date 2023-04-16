@@ -1,7 +1,7 @@
 @layer components {
 	.form-input {
-		@apply ring-0 outline-none appearance-none border-2 placeholder-primary-dark/30 border-primary-light rounded-sm w-full text-primary-dark py-2;
-		@apply dark:bg-gray-dark dark:placeholder-primary-light/30 dark:text-primary-light focus:ring-0 focus:border-primary;
+		@apply ring-0 outline-none appearance-none border-2 placeholder-primary-dark/30 border-primary rounded-sm w-full text-primary-dark py-2;
+		@apply dark:bg-gray-dark dark:placeholder-primary-light/30 dark:text-primary-light focus:ring-0 dark:focus:border-primary-light focus:border-primary-dark;
 		@apply transition-all;
 	}
 }
