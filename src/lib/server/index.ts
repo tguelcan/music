@@ -1,3 +1,4 @@
+import { fail } from '@sveltejs/kit';
 export * from './services';
 
 export const setLanguage = (event, request) => {
@@ -15,3 +16,37 @@ export const setLanguage = (event, request) => {
 
 	return new Request(url);
 };
+
+type ResponserSchema = {
+	/**
+	 * Response data if success
+	 */
+	data?: object;
+	/**
+	 * If form validation successful passed
+	 */
+	success?: boolean;
+	/**
+	 * If form validation not successful passed
+	 */
+	error?: boolean;
+	/**
+	 * List of valiadtion errors as array
+	 */
+	errors?: object[];
+};
+
+export const validateForm = (schema: any, formData: object) =>
+	new Promise<void>((resolve, reject) => {
+		const result = schema.safeParse(formData);
+		if (result.success) {
+			return resolve(result);
+		} else {
+			const data: ResponserSchema = {
+				error: true,
+				errors: result.error.flatten().fieldErrors
+			};
+			console.log(data);
+			return reject(fail(400, data));
+		}
+	});

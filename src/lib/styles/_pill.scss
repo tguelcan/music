@@ -1,3 +1,15 @@
 .pill {
 	@apply rounded-full px-3 py-0.5 text-xs leading-6 text-primary-light/80 ring-1 ring-primary-light/40 text-primary-light select-none;
+
+	&.primary {
+		@apply text-primary ring-primary;
+	}
+
+	&.md {
+		@apply py-1.5;
+	}
+
+	&.checkable {
+		@apply peer-checked:bg-primary-light peer-checked:ring-2;
+	}
 }

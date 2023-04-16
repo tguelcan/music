@@ -99,3 +99,16 @@ export const getArtistAlbums = async (
 	);
 	return responseData;
 };
+
+/**
+ * Doc: https://developer.spotify.com/documentation/web-api/reference/search
+ * @param fetch
+ * @param searchparams
+ * @returns Search album or artist
+ */
+export const search = async (fetch: any, params: string): Promise<object> => {
+	const { q, qType } = params;
+	const response = await fetch(`/api/search?type=${qType}&q=${q}`);
+	console.log(q);
+	return errorHandler(response);
+};

@@ -7,10 +7,6 @@
 	let paused: boolean = false;
 	let currentTime: any;
 	let duration: any;
-
-	audioTrack.subscribe((value) => {
-		console.log(value);
-	});
 </script>
 
 {#if $audioTrack}

@@ -57,4 +57,4 @@ Colors
 ### Upcoming
 
 - User authentication
-- Search function
+- ~~Search function~~ ☑️

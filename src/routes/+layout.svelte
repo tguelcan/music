@@ -12,7 +12,8 @@
 				class="text-2xl font-extrabold tracking-tight ring-2 px-2 py-1 ring-black dark:ring-primary hover:ring-primary"
 				>MUSIC</a
 			>
-			<div class="flex items-center space-x-4">
+			<div class="flex items-center space-x-4 sm:space-x-6">
+				<a href="/search"><i class="gg-search" /></a>
 				<SlectTheme />
 				<a href="https://github.com/tguelcan/music" target="_blank"
 					><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"

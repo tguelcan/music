@@ -15,3 +15,5 @@ export const transformDate = (date) => {
 		year: d.getFullYear()
 	};
 };
+
+export const errorHandler = (form: any, key: string) => form?.error && form?.errors[key];
