@@ -28,7 +28,7 @@
 			>
 			<div class="flex items-center space-x-4 sm:space-x-6">
 				<a href="/search" aria-label="Music Search"><i class="gg-search" /></a>
-
+				<!--
 				<a href="/profile" aria-label="Profile">
 					{#if $user.display_name}
 						<div class="btn primary">{$user.display_name}</div>
@@ -36,6 +36,7 @@
 						<i class="gg-profile" />
 					{/if}
 				</a>
+				-->
 			</div>
 		</div>
 	</div>
