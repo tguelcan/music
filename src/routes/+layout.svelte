@@ -28,15 +28,7 @@
 			>
 			<div class="flex items-center space-x-4 sm:space-x-6">
 				<a href="/search" aria-label="Music Search"><i class="gg-search" /></a>
-				<!--
-				<a href="/profile" aria-label="Profile">
-					{#if $user.display_name}
-						<div class="btn primary">{$user.display_name}</div>
-					{:else}
-						<i class="gg-profile" />
-					{/if}
-				</a>
-				-->
+				<SlectTheme />
 			</div>
 		</div>
 	</div>
@@ -56,8 +48,6 @@
 			</div>
 
 			<div class="flex justify-center sm:justify-start mt-6 sm:mt-0 space-x-4">
-				<SlectTheme />
-
 				<a
 					href="https://github.com/tguelcan/music"
 					target="_blank"
