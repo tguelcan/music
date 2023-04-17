@@ -1,6 +1,6 @@
 # SvelteKit Music App Example
 
-The project was created as part of the [Sveltekit Hackarthon](https://hack.sveltesociety.dev/) and is intended to show examples of how to connect and process data as well as some practical examples of how to develop frontend components with tailwindcss.
+The project was created as part of the [Sveltekit Hackathon](https://hack.sveltesociety.dev/) and is intended to show examples of how to connect and process data as well as some practical examples of how to develop frontend components with tailwindcss.
 The project is open source and collaboration / further development is welcome.
 
 <table><tr>
