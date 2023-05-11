@@ -8,7 +8,7 @@ The project is open source and collaboration / further development is welcome.
 <td> <img src="public/screenshot2.png" width="245" alt="Screenshot2"> </td>
 </tr></table>
 
-[Live Demo](music-tayfuuu.vercel.app)
+[Live Demo](https://music-tayfuuu.vercel.app)
 
 ## Develope
 
