@@ -31,11 +31,11 @@
 						id="type_artist"
 						bind:group
 					/>
-					<label class="pill primary md checkable" for="type_artist">Artist</label>
+					<label class="pill primary md checkable cursor-pointer" for="type_artist">Artist</label>
 				</div>
 				<div>
 					<input class="sr-only peer" type="radio" value="album" name="qType" id="type_album" />
-					<label class="pill primary md checkable" for="type_album">Album</label>
+					<label class="pill primary md checkable cursor-pointer" for="type_album">Album</label>
 				</div>
 			</div>
 			<div>
