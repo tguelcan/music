@@ -4,6 +4,7 @@
 	import { errorHandler } from '$helper';
 	import Cover from '$components/elements/Cover.svelte';
 	import Artist from '$components/elements/Artist.svelte';
+	import Spinner from '$components/elements/Spinner.svelte';
 
 	export let form: ActionData;
 	let group = 'artist';
@@ -16,7 +17,7 @@
 				<label for="search" class="sr-only">Search</label>
 				<input id="search" type="text" class="form-input" placeholder="Search Artist" name="q" />
 				{#if errorHandler(form, 'q')}
-					{#each form.errors['q'] as message}
+					{#each form?.errors['q'] as message}
 						<small class="text-primary">{message}</small>
 					{/each}
 				{/if}
@@ -40,7 +41,7 @@
 			</div>
 			<div>
 				{#if errorHandler(form, 'qType')}
-					{#each form.errors['qType'] as message}
+					{#each form?.errors['qType'] as message}
 						<small class="text-primary">{message}</small>
 					{/each}
 				{/if}
@@ -48,6 +49,8 @@
 		</form>
 	</div>
 </div>
+
+<!-- <Spinner /> -->
 
 {#if form?.artists}
 	<div class="container bg-primary-dark p-8 mt-4 md:rounded">
@@ -57,7 +60,7 @@
 				<Artist {...releatedArtist} />
 			{/each}
 		</div>
-	</div>
+	</div>	
 {/if}
 {#if form?.albums}
 	<div class="container mt-4">
