@@ -2,13 +2,14 @@
 	import { generateSrcset, convertMilliseconds, removeEmptyElements } from '$helper';
 	import { audioTrack } from '$components/player/store';
 	export let title: string | null = null;
-	export let tracks: object;
+	export let tracks: object[];
 	// Remove empty elements from array
 	// Some of Spotify Tracklist have empty elements like
 	// artist/6UZ0ba50XreR4TM8u322gs
 	const allTracks = removeEmptyElements(tracks);
 
-	let assignTrack = (track) => {
+	
+	let assignTrack = (track: any) => {
 		if (track.preview_url) {
 			$audioTrack = track;
 		}

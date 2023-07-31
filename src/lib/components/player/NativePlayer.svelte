@@ -18,6 +18,7 @@
 		bind:paused
 		bind:currentTime
 		bind:duration
+		on:ended={() => ($audioTrack = null)}
 	/>
 	<div
 		transition:fly={{ y: 60 }}
