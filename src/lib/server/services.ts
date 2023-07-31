@@ -109,6 +109,6 @@ export const getArtistAlbums = async (
 export const search = async (fetch: any, params: string): Promise<object> => {
 	const { q, qType } = params;
 	const response = await fetch(`/api/search?type=${qType}&q=${q}`);
-	console.log(q);
+	console.log(q, qType);
 	return errorHandler(response);
 };
