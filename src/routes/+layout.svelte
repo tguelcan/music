@@ -1,11 +1,12 @@
 <script lang="ts">
 	import '../app.scss';
 	import type { LayoutData } from './$types';
-	import SlectTheme from '$components/layout/Theme.svelte';
+	import SelectTheme from '$components/layout/Theme.svelte';
 	import NativePlayer from '$components/player/NativePlayer.svelte';
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';
-	export let data: LayoutData;
+
+	export let data: LayoutData | any;
 
 	/**
 	 * Store user
@@ -28,7 +29,7 @@
 			>
 			<div class="flex items-center space-x-4 sm:space-x-6">
 				<a href="/search" aria-label="Music Search"><i class="gg-search" /></a>
-				<SlectTheme />
+				<SelectTheme />
 			</div>
 		</div>
 	</div>

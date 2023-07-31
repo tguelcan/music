@@ -4,14 +4,16 @@
 	import { errorHandler } from '$helper';
 	import Cover from '$components/elements/Cover.svelte';
 	import Artist from '$components/elements/Artist.svelte';
-	import Spinner from '$components/elements/Spinner.svelte';
+
 
 	export let form: ActionData;
 	let group = 'artist';
+
 </script>
 
 <div class="container">
 	<div class="max-w-md">
+
 		<form method="POST" use:enhance class="space-y-2">
 			<div>
 				<label for="search" class="sr-only">Search</label>
@@ -22,6 +24,7 @@
 					{/each}
 				{/if}
 			</div>
+			
 			<div class="flex space-x-2">
 				<div>
 					<input
@@ -53,9 +56,9 @@
 <!-- <Spinner /> -->
 
 {#if form?.artists}
-	<div class="container bg-primary-dark p-8 mt-4 md:rounded">
+	<div class="container  bg-primary-dark p-8 mt-4 md:rounded">
 		<h1 class="title text-gray-light">Artists</h1>
-		<div class="flex flex-wrap gap-4 sm:gap-7 justify-start">
+		<div class="flex flex-wrap gap-4 sm:gap-7 items-center justify-center">
 			{#each form.artists.items as releatedArtist}
 				<Artist {...releatedArtist} />
 			{/each}
