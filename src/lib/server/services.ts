@@ -112,3 +112,9 @@ export const search = async (fetch: any, params: string): Promise<object> => {
 	console.log(q, qType);
 	return errorHandler(response);
 };
+
+
+// * Assistance with form validation - https://superforms.rocks/
+// * Implementation of toast notifications - https://svelte-french-toast.com/
+// * Suggestion for UI components libraries -https://flowbite-svelte.com/
+// * Date Picker https://www.npmjs.com/package/svelte-flatpickr
