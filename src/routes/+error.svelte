@@ -17,5 +17,3 @@
 		>
 	{/if}
 </div>
-
-<!-- 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 -->
