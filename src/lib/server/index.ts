@@ -2,7 +2,7 @@ import { fail } from '@sveltejs/kit';
 export * from './services';
 export * from './auth';
 
-export const setLanguage = (event, request) => {
+export const setLanguage = (event:any, request:any) => {
 	let lang = event.request.headers.get('accept-language')?.split(',')[0]?.trim()?.slice(0, 2);
 
 	// spotify does not know a country code 'en'. Create fallback for this.
@@ -38,7 +38,7 @@ type ResponserSchema = {
 };
 
 export const validateForm = (schema: any, formData: object) =>
-	new Promise<void>((resolve, reject) => {
+	new Promise<{[x:string]:any}>((resolve, reject) => {
 		const result = schema.safeParse(formData);
 		if (result.success) {
 			return resolve(result);
@@ -47,7 +47,6 @@ export const validateForm = (schema: any, formData: object) =>
 				error: true,
 				errors: result.error.flatten().fieldErrors
 			};
-			console.log(data);
 			return reject(fail(400, data));
 		}
 	});

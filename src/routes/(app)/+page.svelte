@@ -1,9 +1,12 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import Cover from '$components/elements/Cover.svelte';
 	import Coverage from '$components/elements/Coverage.svelte';
 
-	export let data: PageData;
+	interface albumFrame {
+		newAlbums: { [x:string] : any }
+	}
+
+	export let data: albumFrame;
 
 	$: ({ newAlbums } = data);
 </script>

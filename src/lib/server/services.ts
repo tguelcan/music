@@ -109,6 +109,12 @@ export const getArtistAlbums = async (
 export const search = async (fetch: any, params: string): Promise<object> => {
 	const { q, qType } = params;
 	const response = await fetch(`/api/search?type=${qType}&q=${q}`);
-	console.log(q);
+	console.log(q, qType);
 	return errorHandler(response);
 };
+
+
+// * Assistance with form validation - https://superforms.rocks/
+// * Implementation of toast notifications - https://svelte-french-toast.com/
+// * Suggestion for UI components libraries -https://flowbite-svelte.com/
+// * Date Picker https://www.npmjs.com/package/svelte-flatpickr

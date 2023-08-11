@@ -19,4 +19,4 @@ export const transformDate = (date: Date | string) => {
 
 export const errorHandler = (form: any, key: string) => form?.error && form?.errors[key];
 
-export const removeEmptyElements = (items: object[]) => items.filter((n: any) => n);
+export const removeEmptyElements = (items: object[] | any) => items.filter((n: any) => n);
