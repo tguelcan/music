@@ -1,14 +1,12 @@
 <script lang="ts">
-	import { generateSrcset, convertMilliseconds, removeEmptyElements } from '$helper';
+	import { generateSrcset, convertMilliseconds } from '$helper';
 	import { audioTrack } from '$components/player/store';
 	export let title: string | null = null;
-	export let tracks: object[];
+	export let tracks: object[] | any;
 	// Remove empty elements from array
 	// Some of Spotify Tracklist have empty elements like
 	// artist/6UZ0ba50XreR4TM8u322gs
-	const allTracks = removeEmptyElements(tracks);
 
-	
 	let assignTrack = (track: any) => {
 		if (track.preview_url) {
 			$audioTrack = track;
@@ -20,7 +18,7 @@
 	<h1 class="title pt-8">{title}</h1>
 {/if}
 <ul class="divide-y divide-gray dark:divide-primary-dark">
-	{#each allTracks as track}
+	{#each tracks as track}
 		<li
 			class="sm:flex items-top py-4 transition-all p-3 {track.preview_url
 				? 'cursor-pointer hover:bg-gray dark:hover:bg-primary-dark'
