@@ -5,16 +5,15 @@
 	import Artist from '$components/elements/Artist.svelte';
 	import Header from '$components/elements/Header.svelte';
 	import List from '$components/elements/List.svelte';
-
 	export let data: PageData;
 
-	$: ({ artist, topTracks, albums, releatedArtists } = data);
+	$: ({ artist, topTracks, albums, releatedArtists } = data);	
 </script>
 
 <Header name={artist.name} genres={artist.genres} images={artist.images} />
 
 <div class="wrapper">
-	{#if removeEmptyElements(topTracks.tracks)?.length}
+	{#if removeEmptyElements(topTracks?.tracks)?.length}
 		<div class="container">
 			<List title="Popular" tracks={removeEmptyElements(topTracks.tracks)} />
 		</div>
